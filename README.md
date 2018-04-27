@@ -1,4 +1,4 @@
-# web-graph
+# feathersjs-playground-app
 
 >
 
