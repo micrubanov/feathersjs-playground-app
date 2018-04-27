@@ -4,6 +4,12 @@ const compress = require('compression');
 const cors = require('cors');
 const helmet = require('helmet');
 const logger = require('winston');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
+const mongooseService = require('../lib');
+mongoose.connect('mongodb://localhost:27017/feathersjs-playground-app');
 
 const feathers = require('@feathersjs/feathers');
 const configuration = require('@feathersjs/configuration');
@@ -13,9 +19,8 @@ const promBundle = require("express-prom-bundle");
 const metricsMiddleware = promBundle({includeMethod: true});
 
 
-
 const middleware = require('./middleware');
-const services = require('./services');
+const services = require('./services')(mongooseService);
 const appHooks = require('./app.hooks');
 const channels = require('./channels');
 

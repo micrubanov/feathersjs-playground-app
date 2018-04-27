@@ -1,6 +1,6 @@
 # web-graph
 
-> 
+>
 
 ## About
 
@@ -26,6 +26,16 @@ Getting up and running is as easy as 1, 2, 3.
 ## Testing
 
 Simply run `npm test` and all your tests in the `test/` directory will be run.
+
+### CURL EXAMPLES
+
+#### Create a record
+
+For now data is send in format of query sting , not json.
+
+```
+curl -X POST -i http://localhost:3030/tags --data "name=test"
+```
 
 ## Scaffolding
 

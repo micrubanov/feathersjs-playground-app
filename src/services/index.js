@@ -1,3 +1,17 @@
-// eslint-disable-next-line no-unused-vars
-module.exports = function (app) {
+const Tag = require("../models/tag");
+
+module.exports = function(mongooseService) {
+  return function(app) {
+    app.use(
+      "tags",
+      mongooseService({
+        name: "tag",
+        Model: Tag,
+        paginate: {
+          default: 10,
+          max: 20
+        }
+      })
+    );
+  };
 };
