@@ -14,7 +14,7 @@ Getting up and running is as easy as 1, 2, 3.
 2. Install your dependencies
 
     ```
-    cd path/to/web-graph; npm install
+    cd path/to/feathersjs-playground-app; yarn
     ```
 
 3. Start your app
@@ -56,9 +56,11 @@ For more information on all the things you can do with Feathers visit [docs.feat
 
 ## Changelog
 
-__0.1.0__
+__1.0.0__
 
 - Initial release
+- Mongoose service provider
+- Model usage example
 
 ## License
 
