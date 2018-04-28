@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-var MessageSchema = new mongoose.Schema({
+var schema = new mongoose.Schema({
   name: { type: String, required: true, unique: true }
 });
 
 
-var Tag = mongoose.model("Tag", MessageSchema);
+var Tag = mongoose.model("Tag", schema);
 
 module.exports = Tag;
