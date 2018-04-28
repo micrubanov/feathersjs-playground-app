@@ -1,6 +1,8 @@
 <html>
   <head>
     <title>Welcome to Feathers</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
+    <script src="//unpkg.com/@feathersjs/client@^3.0.0/dist/feathers.js"></script>
     <style>
       * {
         margin: 0;
@@ -59,6 +61,15 @@
         color: #31D8A0;
       }
     </style>
+
+    <script charset="utf-8">
+      // @feathersjs/client is exposed as the `feathers` global.
+      var app = feathers();
+
+      app.configure(feathers.authentication());
+      console.debug('app is an', typeof app);
+    </script>
+
   </head>
   <body>
     <main class="container">
